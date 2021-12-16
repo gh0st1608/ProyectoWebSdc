@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+ 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>mfood</title>
+    <base href="/">
+		<link rel="icon" href="favicon.ico">
+		<!--owl carousel-->
+		<link rel="stylesheet" type="text/css" href="assets/css/owl-coursel/owl.carousel.css" media="screen"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/owl-coursel/owl.theme.css" media="screen"/>
+		<!--magnific popup-->
+		<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup/magnific-popup.css" media="screen"/>
+		<!--bootstrap-->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="screen"/>
+		<!--awesome font icons-->
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" media="screen"/>
+		<!--style-->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen"/>
+		<!--google font-->
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <app-root></app-root>
+    <!--jquery-->
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <!--bootstrap-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--owl carousel-->
+    <script src="assets/js/owl-coursel/owl.carousel.js"></script>
+    <!--magnific popup-->
+    <script src="assets/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!--custom-->
+    <script src="assets/js/script.js"></script>
+	<!--google-->
+	<script async defer src="http://maps.googleapis.com/maps/api/js?callback=initialize"></script>
+    <script>
+        function initialize()
+        {
+            var mapDiv = document.getElementById('googlemap');
+            var map = new google.maps.Map(mapDiv, {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 12
+            });
+        }
+    </script>
+</body>
+</html>

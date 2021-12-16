@@ -1,0 +1,46 @@
+# This file is a template, and might need editing before it works on your project.
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Bash.gitlab-ci.yml
+
+# See https://docs.gitlab.com/ee/ci/yaml/index.html for all available options
+
+# you can delete this line if you're not using Docker
+production_job:
+  stage: deploy
+  only: 
+    - master
+  before_script:
+    # Generar llave ssh 
+    - mkdir -p ~/.ssh
+    - echo -e "$PRODUCCION_LLAVE_SSH_PRIVADA" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyCheking no\n\n" > ~/.ssh/config'
+
+  script:
+    - bash .gitlab-deploy-prod.sh
+
+  environment:
+    name: production
+    url: https://www.saboresdecasma.com
+
+develop_job:
+  stage: deploy
+  only:
+    - develop
+
+  before_script:
+    # Generar llave ssh 
+    - mkdir -p ~/.ssh
+    - echo -e "$PRODUCCION_LLAVE_SSH_PRIVADA" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyCheking no\n\n" > ~/.ssh/config'
+
+  script:
+    - bash .gitlab-deploy-develop.sh
+
+  environment:
+    name: develop
+    url: https://www.develop.saboresdecasma.com
+

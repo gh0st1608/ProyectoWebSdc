@@ -1,0 +1,60 @@
+<!--populer-->
+<div class="product most-popular">
+  <div class="title">Más<h3>Populares</h3></div>
+  <div class="row" [(ngModel)]="listaPopulares" [(ngModel)]="listaDisplayPopulares" >
+    <div class="owl" data-items="4" data-itemsDesktop="4" data-itemsDesktopSmall="3" data-itemsTablet="2" data-itemsMobile="1">
+      <div class="col-md-12" [ngStyle] = "{'display': listaDisplayPopulares[0]}">
+        <div class="thumbnail">
+          <a href="{{listaPopulares[0].Ruta}}" class="hover-img image-zoom">
+            <img src="{{listaPopulares[0].Ruta}}" alt="image">
+            <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <div class="caption">
+            <h4><a href="fdetail.html">{{listaPopulares[0].Nombre}}</a></h4>
+            <p class="price">${{listaPopulares[0].Precio}}</p>
+            <p>{{listaPopulares[0].Descripcion}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12" [ngStyle] = "{'display': listaDisplayPopulares[1]}">
+        <div class="thumbnail">
+          <a href="{{listaPopulares[1].Ruta}}" class="hover-img image-zoom">
+            <img src="{{listaPopulares[1].Ruta}}" alt="image">
+            <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <div class="caption">
+            <h4><a href="fdetail.html">{{listaPopulares[1].Nombre}}</a></h4>
+            <p class="price">${{listaPopulares[1].Precio}}</p>
+            <p>{{listaPopulares[1].Descripcion}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12" [ngStyle] = "{'display': listaDisplayPopulares[2]}">
+        <div class="thumbnail">
+          <a href="{{listaPopulares[2].Ruta}}" class="hover-img image-zoom">
+            <img src="{{listaPopulares[2].Ruta}}" alt="image">
+            <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <div class="caption">
+            <h4><a href="fdetail.html">{{listaPopulares[2].Nombre}}</a></h4>
+            <p class="price">${{listaPopulares[2].Precio}}</p>
+            <p>{{listaPopulares[2].Descripcion}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12" [ngStyle] = "{'display': listaDisplayPopulares[3]}">
+        <div class="thumbnail">
+          <a href="{{listaPopulares[3].Ruta}}" class="hover-img image-zoom">
+            <img src="{{listaPopulares[3].Ruta}}" alt="image">
+            <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+          </a>
+          <div class="caption">
+            <h4><a href="fdetail.html">{{listaPopulares[3].Nombre}}</a></h4>
+            <p class="price">${{listaPopulares[3].Precio}}</p>
+            <p>{{listaPopulares[3].Descripcion}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

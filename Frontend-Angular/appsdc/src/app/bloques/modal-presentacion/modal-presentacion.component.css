@@ -1,0 +1,44 @@
+.app-modal-presentacion{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 65%;
+  }
+  
+.modal-container{
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto;
+    background-color: rgba(192,192,192,0.3);
+}
+
+
+.btn-modal-carta{
+  color:#fff;
+  background:#da451b;
+  text-transform:uppercase;
+  padding-left:6px 25px 6px 25px;
+  border: radius 2px;
+  border:none;
+}
+
+.btn-modal-carta:hover,.btn-modal-carta:active,.btn-modal-carta:focus{
+  background:#333;
+  color:#fff;
+}
+
+.div-option-carta{
+  padding-left: 0px;
+}
+  /*
+  .file-input {
+    display: none;
+  }
+  */

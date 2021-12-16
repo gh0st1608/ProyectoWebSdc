@@ -1,0 +1,34 @@
+
+<div class="modal-container" [ngStyle]="{'display': (open5==true) ? 'block' : 'none'}">
+    <div class="app-modal-presentacion" >
+    <h1>Formulario de Actualizaciòn de Presentacion</h1>
+    <form [formGroup]="presentacionForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Nombre" placeholder="Nombre Plato">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Precio" placeholder="Precio">
+        </div>
+        <div class="form-group">
+            <input #fileInput   type="file"  accept="image/*" (change)="onFileSelect($event)" />
+        </div>
+        <div class="form-group">
+            <label>Posicion Imagen</label>
+            <select [(ngModel)]="itemSeleccionado"  formControlName="Item" (change)="seleccionarItemPresentacion()">
+                <option value="0">Seleccione una opcion</option>
+                <option value="1">Izquierda</option>
+                <option value="2">Derecha Superior</option>
+                <option value="3">Derecha Inferior</option>
+                <option value="4">Base Inferior</option>
+                <!--<option *ngFor="let Id of items">{{Id}} </option>-->
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn-modal-carta" (click)="handleSave()">Save </button>
+        </div>
+        <div class="form-group">
+            <button class="btn-modal-carta" (click)="handleCancel()">Cancel </button>
+        </div>
+    </form>
+    </div>
+</div>

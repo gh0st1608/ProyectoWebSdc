@@ -1,0 +1,33 @@
+
+<div class="modal-container" [ngStyle]="{'display': (open4==true) ? 'block' : 'none'}">
+    <div class="app-modal-populares">
+    <h1>Formulario de Actualizaciòn Populares</h1>
+    <form [formGroup]="popularesForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Nombre" placeholder="Plato Popular">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Descripcion" placeholder="Descripcion">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Precio" placeholder="Precio">
+        </div>
+        <div class="form-group">
+            <input #fileInput   type="file"  accept="image/*" (change)="onFileSelect($event)" />
+        </div>
+        <div class="form-group">
+            <select [(ngModel)]="itemSeleccionado"  formControlName="Item" (change)="seleccionarItemPopulares()">
+                <option value="0">Seleccionar Item</option>
+                <option *ngFor="let Id of items">{{Id}} </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn-modal-carta" (click)="handleSave()">Save </button>
+        </div>
+        <div class="form-group">
+            <button class="btn-modal-carta" (click)="handleCancel()">Cancel </button>
+        </div>
+    </form>
+
+    </div>
+</div>

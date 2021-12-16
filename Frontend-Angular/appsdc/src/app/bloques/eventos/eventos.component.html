@@ -1,0 +1,234 @@
+<div class="row">
+    <div class="col-md-6">
+      <!--blog recent-->
+      <div class="recent_post">
+        <div class="title">Licores<h3>Emblema</h3></div>
+        <div class="media media-item">
+          <div class="media-left">
+            <figure>
+              <a href="#" class="hover-img">
+                <img src="assets/images/blog/blog3_web.jpg" alt="image" width="110">
+              </a>
+            </figure>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><a href="#">Machu Picchu</a></h4>
+            <div class="date">
+              <span>Marzo 15, 2021</span>
+              <!--<span>by<a href="#">Admin</a></span>-->
+              <!--<span>3 comment</span>-->
+            </div>
+            <p>Delicioso y Refrescante licor.
+              <!--<a class="readmore" href="#">Read more</a>-->
+            </p>
+          </div>
+        </div>
+        <div class="media media-item">
+          <div class="media-left">
+            <figure>
+              <a href="#" class="hover-img">
+                <img src="assets/images/blog/blog4_web.jpg" alt="image" width="110">
+              </a>
+            </figure>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><a href="#">Algarrobina</a></h4>
+            <div class="date">
+              <span>Abril 12, 2021</span>
+              <!--<span>by<a href="#">Admin</a></span>
+              <span>3 comment</span>-->
+            </div>
+            <p>Dulce e Impactante licor.
+              <!--<a class="readmore" href="#">Read more</a>-->
+            </p>
+          </div>
+        </div>
+        <div class="media media-item">
+          <div class="media-left">
+            <figure>
+              <a href="#" class="hover-img">
+                <img src="assets/images/blog/blog6_web.jpg" alt="image" width="110">
+              </a>
+            </figure>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><a href="#">Pisco Sour</a></h4>
+            <div class="date">
+              <span>Mayo 15, 2021</span>
+              <!--<span>by<a href="#">Admin</a></span>
+              <span>3 comment</span>-->
+            </div>
+            <p>Sabroso Licor reconocido a nivel internacional
+              <!--<a class="readmore" href="#">Read more</a>-->
+            </p>
+          </div>
+        </div>
+        <div class="media media-item">
+          <div class="media-left">
+            <figure>
+              <a href="#" class="hover-img">
+                <img src="assets/images/blog/blog7_web.jpg" alt="image" width="110">
+              </a>
+            </figure>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><a href="#">Chilcanos</a></h4>
+            <div class="date">
+              <span>Junio 5, 2021</span>
+              <!--<span>by<a href="#">Admin</a></span>
+              <span>3 comment</span>-->
+            </div>
+            <p>Variedad y sabor frutal en un mismo licor
+              <!--<a class="readmore" href="#">Read more</a>-->
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--blog recent-->
+    </div>
+    <div class="col-md-6" >
+      <!--event-->
+      <div class="event" [(ngModel)] = "listaEventos" [(ngModel)]="listaDisplayEventos" >
+        <div class="title">Eventos y <h3>Novedades</h3></div>
+        <div class="owl" data-items="1" data-itemsDesktop="1" data-itemsDesktopSmall="1" data-i-temsTablet="1" data-itemsMobile="1">
+          <div class="event-item" [ngStyle] = "{'display': listaDisplayEventos[0]}" >
+            <a href="#" class="hover-img">
+              <img src="{{listaEventos[0].Ruta}}" alt="image">
+            </a>
+            <div class="media media-item">
+              <div class="media-left media-middle color-w">
+                <span>{{listaEventos[0].Dia}}</span>
+                {{listaEventos[0].Mes}}
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a href="#">{{listaEventos[0].Titulo}}</a></h4>
+                <p>{{listaEventos[0].Descripcion}}
+                  <a class="readmore" href="#">Read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="event-item" [ngStyle] = "{'display': listaDisplayEventos[1]}"  >
+            <a href="#" class="hover-img">
+              <img src="{{listaEventos[1].Ruta}}" alt="image">
+            </a>
+            <div class="media media-item">
+              <div class="media-left media-middle color-w">
+                <span>{{listaEventos[1].Dia}}</span>
+                {{listaEventos[1].Mes}}
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a href="#">{{listaEventos[1].Titulo}}</a></h4>
+                <p>{{listaEventos[1].Descripcion}}
+                  <a class="readmore" href="#">Read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="event-item" [ngStyle] = "{'display': listaDisplayEventos[2]}"  >
+            <a href="#" class="hover-img">
+              <img src="{{listaEventos[2].Ruta}}" alt="image">
+            </a>
+            <div class="media media-item">
+              <div class="media-left media-middle color-w">
+                <span>{{listaEventos[2].Dia}}</span>
+                {{listaEventos[2].Mes}}
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a href="#">{{listaEventos[2].Titulo}}</a></h4>
+                <p>{{listaEventos[2].Descripcion}}
+                  <a class="readmore" href="#">Read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="event-item" [ngStyle] = "{'display': listaDisplayEventos[3]}"  >
+            <a href="#" class="hover-img">
+              <img src="{{listaEventos[3].Ruta}}" alt="image">
+            </a>
+            <div class="media media-item">
+              <div class="media-left media-middle color-w">
+                <span>{{listaEventos[3].Dia}}</span>
+                {{listaEventos[3].Mes}}
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a href="#">{{listaEventos[3].Titulo}}</a></h4>
+                <p>{{listaEventos[3].Descripcion}}
+                  <a class="readmore" href="#">Read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="event-item" [ngStyle] = "{'display': listaDisplayEventos[4]}"  >
+            <a href="#" class="hover-img">
+              <img src="{{listaEventos[4].Ruta}}" alt="image">
+            </a>
+            <div class="media media-item">
+              <div class="media-left media-middle color-w">
+                <span>{{listaEventos[4].Dia}}</span>
+                {{listaEventos[4].Mes}}
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a href="#">{{listaEventos[4].Titulo}}</a></h4>
+                <p>{{listaEventos[4].Descripcion}}
+                  <a class="readmore" href="#">Read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="event-item" [ngStyle] = "{'display': listaDisplayEventos[5]}"  >
+            <a href="#" class="hover-img">
+              <img src="{{listaEventos[5].Ruta}}" alt="image">
+            </a>
+            <div class="media media-item">
+              <div class="media-left media-middle color-w">
+                <span>{{listaEventos[5].Dia}}</span>
+                {{listaEventos[5].Mes}}
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a href="#">{{listaEventos[5].Titulo}}</a></h4>
+                <p>{{listaEventos[5].Descripcion}}
+                  <a class="readmore" href="#">Read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--<div class="event-item">
+            <a href="#" class="hover-img">
+              <img src="assets/images/eventos/eventos_diadelamujer_web.jpg" alt="image">
+            </a>
+            <div class="media media-item">
+              <div class="media-left media-middle color-w">
+                <span>8</span>
+                Marzo
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a href="#">Dia de la Mujer</a></h4>
+                <p>Los mejores platillos para el mejor complemento del hombre.
+                  <a class="readmore" href="#">Read more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <a href="#" class="hover-img">
+              <img src="assets/images/eventos/eventos_diadelamadre2_web.jpg" alt="image">
+            </a>
+            <div class="media media-item">
+              <div class="media-left media-middle color-w">
+                <span>16</span>
+                Mayo
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a href="#">Dia de la Madre</a></h4>
+                <p>Servimos lo mejor de nuestros platillo a nuestras madres tan lindas.
+                  <a class="readmore" href="#">Read more</a>
+                </p>
+              </div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <!--/event-->
+    </div>
+  </div>

@@ -1,0 +1,74 @@
+<div class="reservation">
+    <div class="title">Realizar<h3>Reservación</h3></div>	
+    <p>Para conseguir una reservación, por favor rellena el siguiente formulario. Nosotros recibiremos tu reserva por correo.</p>
+    <div class="row">
+        <div class="col-md-8">
+            <form [formGroup]="reservaForm" (submit)="submit()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-item" formControlName="Nombres" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-item" formControlName="Celular" placeholder="Celular">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-item" formControlName="Correo" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-item" formControlName="Invitado" placeholder="Invitado">
+                        </div>
+                    </div>
+                    <!--
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-item" formControlName="Fecha" placeholder="Fecha">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-item" formControlName="Hora" placeholder="Hora">
+                        </div>
+                    </div>
+                    -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="date" class="form-control form-item" formControlName="Fecha">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="time" class="form-control form-item" formControlName="Hora">
+                        </div>
+                    </div> 
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control form-item" rows="3" formControlName="Contenido" placeholder="Contenido"></textarea>
+                </div>
+                <button type="submit" name="submit" class="btn btn-1">Reservar ahora</button>
+            </form>
+        </div>
+        <!-- contact info-->
+        <div class="col-md-4">
+            <div class="lh">
+                <i class="fa fa-phone"></i> 
+                <p>(56) 99872 5080</p>
+            </div>
+            <div class="lh">
+                <i class="fa fa-envelope-o"></i> 
+                <p>saboresdecasma.restaurante@gmail</p>
+            </div>
+            <div class="lh">
+                <i class="fa fa-map-signs"></i> 
+                <p>Domingo Toro Herrera 980 Talagante</p>
+            </div>
+        </div>
+        <!-- /contact info-->
+    </div>
+</div>

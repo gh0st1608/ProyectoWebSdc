@@ -1,0 +1,56 @@
+
+
+# This is the stages / task to perfom in jobs
+stages:
+  - dependencias
+  - construccion
+  - despliegue
+
+dependencias:
+  stage: dependencias
+  tags:
+    - shell-runner-front  
+  script: 
+    - pwd
+    - whoami
+    - cd /home/ubuntu/sdc_front
+    - npm install
+  artifacts:
+    expire_in: 1h
+    paths:
+      - node_modules/
+  cache:
+    paths:
+      - node_modules/
+  only:
+    - master
+
+
+
+construccion:
+  stage: construccion
+  tags:
+    - shell-runner-front  
+  script:
+    - pwd
+    - whoami
+    - rm -r /home/ubuntu/sdc_front/dist/appsdc/*
+    - cp -r -u * /home/ubuntu/sdc_front
+  only:
+    - develop
+
+
+deploy_stage:
+  stage: despliegue
+  tags:
+    - shell-runner-front  
+  script:
+    - cd /var/www/saboresdecasma.com/public_html
+    - pwd
+    - rm -r /var/www/saboresdecasma.com/public_html/*
+    - cp -r /var/www/solutionserj.com/public_html/.htaccess /var/www/saboresdecasma.com/public_html
+    - cp -r /home/ubuntu/sdc_front/dist/appsdc/* /var/www/saboresdecasma.com/public_html
+    - cd /etc/init.d/apache2 restart
+    - systemctl restart apache2
+  only:
+    - master

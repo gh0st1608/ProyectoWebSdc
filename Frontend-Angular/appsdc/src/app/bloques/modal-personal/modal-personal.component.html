@@ -1,0 +1,39 @@
+
+<div class="modal-container" [ngStyle]="{'display': (open3==true) ? 'block' : 'none'}">
+    <div class="app-modal-personal" >
+    <h1>Formulario de Actualizaciòn de Personal</h1>
+    <form [formGroup]="empleadoForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Nombre" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="ApellidoPaterno" placeholder="Apellido Paterno">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="ApellidoMaterno" placeholder="Apellido Materno">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Cargo" placeholder="Cargo">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Descripcion" placeholder="Descripcion Empleado(Max 50 letras)">
+        </div>
+        <div class="form-group">
+            <input #fileInput   type="file"  accept="image/*" (change)="onFileSelect($event)" />
+        </div>
+        <div class="form-group">
+            <select [(ngModel)]="itemSeleccionado"  formControlName="Item" (change)="seleccionarItemPersonal()">
+                <option value="0">Seleccione Empleado</option>
+                <option *ngFor="let Id of items">{{Id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn-modal-carta" (click)="handleSave()">Save </button>
+        </div>
+        <div class="form-group">
+            <button class="btn-modal-carta" (click)="handleCancel()">Cancel </button>
+        </div>
+    </form>
+
+    </div>
+</div>

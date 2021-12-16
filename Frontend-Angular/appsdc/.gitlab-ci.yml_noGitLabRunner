@@ -1,0 +1,39 @@
+# Node Image for docker on which code will execute
+image: node:latest
+
+# This is the stages / task to perfom in jobs
+stages:
+  - build
+  - deploy
+  
+# This command is run before the execution of stages   
+before_script:
+  - npm install
+
+# Job One for making build
+build_master:
+  stage: build
+  script:
+  - npm run build
+  only: ['master']
+
+# Job Two for deploy build to server
+deploy_master:
+  stage: deploy
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - mkdir -p ~/.ssh
+    - pwd
+    - chmod 700 ~/.ssh
+    - pwd
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - apt-get update -y
+    - apt-get -y install rsync
+  script:
+    - ssh -i $PRODUCCION_LLAVE_SSH_PRIVADA ubuntu@$PRODUCCION_SERVIDOR_DESPLIEGUE
+    - rsync -zvhr -auv -e "ssh -i $PRODUCCION_LLAVE_SSH_PRIVADA" dist/ ubuntu@$PRODUCCION_SERVIDOR_DESPLIEGUE:/var/www/html/angular/
+  only: ['master']
+
+
+  //export NODE_OPTIONS=--openssl-legacy-provider

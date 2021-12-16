@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-5 col-md-4">
+      <!--menu category-->
+      <div class="mn-category color-w">
+        <div class="mn-category-inner">
+          <div class="title"><h3>Carta</h3></div>
+          <ul class="list-ul">
+            <li><a href="menu.html">01. Ceviches</a><span></span></li>
+            <li><a href="menu.html">02. Tiraditos</a><span></span></li>
+            <li><a href="menu.html">03. Lomo Saltado</a><span></span></li>
+            <li><a href="menu.html">04. Arroces</a><span></span></li>
+            <li><a href="menu.html">05. Pastas</a><span></span></li>
+            <li><a href="menu.html">06. Chicharrones</a><span></span></li>
+            <li><a href="menu.html">07. Jugosos</a><span></span></li>
+            <li><a href="menu.html">08. Carnes</a><span></span></li>
+            <li><a href="menu.html">09. Postres</a><span></span></li>
+            <li><a href="menu.html">10. Licores</a><span></span></li>
+          </ul>
+        </div>
+      </div>
+      <!--/menu category-->
+    </div>
+    <div class="col-sm-7 col-md-8">
+      <!--gallery-->
+      <div class="gallery-1">
+        <div class="row" [(ngModel)]="listaPresentacion" [(ngModel)]="listaDisplayPresentacion">
+          <div [ngStyle] = "{'display': listaDisplayPresentacion[0]}">
+            <div class="gallery-item col-xs-7 col-sm-6 col-md-6" >
+              <a href="{{listaPresentacion[0].Ruta}}" class="hover-img n1">
+                <img src="{{listaPresentacion[0].Ruta}}" alt="image">
+                <div class="hover-caption color-w"><h3>{{listaPresentacion[0].Nombre}} / ${{listaPresentacion[0].Precio}}</h3></div>
+              </a>
+            </div>
+          </div>
+          <div [ngStyle] = "{'display': listaDisplayPresentacion[1]}">
+            <div class="gallery-item col-xs-5 col-sm-6 col-md-6">
+              <a href="{{listaPresentacion[1].Ruta}}" class="hover-img">
+                <img class="n2" src="{{listaPresentacion[1].Ruta}}" alt="image">
+                <div class="hover-caption color-w"><h3>{{listaPresentacion[1].Nombre}} / ${{listaPresentacion[1].Precio}}</h3></div>
+              </a>
+            </div>
+          </div>
+          <!--<div  class="gallery-item col-xs-5 col-sm-6 col-md-6">
+            <a href="assets/images/menu/jugos_web_3.jpg" class="hover-img n2">
+              <img src="assets/images/menu/jugos_web_2.jpg"  alt="image">
+              <div class="hover-caption color-w"><h3>Salads / $22</h3></div>
+            </a>
+          </div>-->
+          <div [ngStyle] = "{'display': listaDisplayPresentacion[2]}">
+            <div class="gallery-item col-xs-5 col-sm-6 col-md-6">
+              <a href="{{listaPresentacion[2].Ruta}}" class="hover-img">
+                <img class="n2" src="{{listaPresentacion[2].Ruta}}" alt="image">
+                <div class="hover-caption color-w"><h3>{{listaPresentacion[2].Nombre}}  / ${{listaPresentacion[2].Precio}}</h3></div>
+              </a>
+            </div>
+          </div>
+          <div [ngStyle] = "{'display': listaDisplayPresentacion[3]}">
+            <div class="gallery-item col-xs-12 col-sm-12 col-md-12" >
+              <a href="{{listaPresentacion[3].Ruta}}" class="hover-img">
+                <img class="n3" src="{{listaPresentacion[3].Ruta}}" alt="image">
+                <div class="hover-caption color-w"><h3>{{listaPresentacion[3].Nombre}}/ ${{listaPresentacion[3].Precio}}</h3></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/gallery-->
+    </div>
+</div>

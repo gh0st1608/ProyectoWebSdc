@@ -1,0 +1,33 @@
+<div class="modal-container" [ngStyle]="{'display': (open6==true) ? 'block' : 'none'}">
+    <div class="app-modal-categoria">
+    <h1>Formulario de Actualizaciòn Categorias</h1>
+    <form [formGroup]="categoriaForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Nombre" placeholder="Categoria">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-item" formControlName="Descripcion" placeholder="Descripcion">
+        </div>
+        <div class="form-group div-option-carta">
+            <select  [(ngModel)]="itemSeleccionadoEstado"  formControlName="ItemEstado" (change)="seleccionarItemEstado()">
+                <option value="0">Selecciona Estado</option>
+                <option *ngFor="let estado of cboEstado"> {{estado}} </option>
+            </select>
+        </div>
+        <label>Escoger opcion si desea actualizar categoria</label>
+        <div class="form-group div-option-carta">
+            <select  [(ngModel)]="itemSeleccionadoCategoria"  formControlName="ItemCategoria" (change)="seleccionarItemCategoria()">
+                <option value="0">Selecciona Categoria Actualizar</option>
+                <option *ngFor="let item of cboCategorias"> {{item}} </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn-modal-carta" (click)="handleSave()">Save </button>
+        </div>
+        <div class="form-group">
+            <button class="btn-modal-carta" (click)="handleCancel()">Cancel </button>
+        </div>
+    </form>
+
+    </div>
+</div>

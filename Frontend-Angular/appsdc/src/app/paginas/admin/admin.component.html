@@ -1,0 +1,58 @@
+<div class='TutorialNery'>
+    <div id="wrap">
+        <app-preload></app-preload>
+        <app-header></app-header>
+        <div id="wrap-body">
+            <div style="overflow-y:visible;overflow-x:hidden;" class="heading-group page-name color-w">
+                <table class="table">
+                    <thead >
+                        <tr>
+                          <th scope="col">Nº</th>
+                          <th scope="col">Sección</th>
+                          <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Categorias</td>
+                            <td><button type="button" name="handleEditarCategorias" (click)='handleClick6()'  class="btn-2">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Carta</td>
+                            <td><button type="button" name="handleEditarMarinos" (click)='handleClick()'  class="btn-2">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Eventos</td>
+                            <td><button type="button" name="handleEditarCausas" (click)='handleClick2()' class="btn-2">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Personal</td>
+                            <td><button type="button" name="handleEditarLicores" (click)='handleClick3()' class="btn-2">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Populares</td>
+                            <td><button type="button" name="handleEditarVariados" (click)='handleClick4()' class="btn-2">Editar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Presentacion</td>
+                            <td><button type="button" name="handleEditarVariados" (click)='handleClick5()' class="btn-2">Editar</button></td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </div>
+        <app-modal-carta [open]="isModalOpened" (closeModalCarta)="handleClose($event)"></app-modal-carta>
+        <app-modal-eventos [open2]="isModalOpened2" (closeModalEventos)="handleClose2($event)"></app-modal-eventos>
+        <app-modal-personal [open3]="isModalOpened3" (closeModalPersonal)="handleClose3($event)"></app-modal-personal>
+        <app-modal-populares [open4]="isModalOpened4" (closeModalPopulares)="handleClose4($event)"></app-modal-populares>
+        <app-modal-presentacion [open5]="isModalOpened5" (closeModalPresentacion)="handleClose5($event)"></app-modal-presentacion>
+        <app-modal-categoria [open6]="isModalOpened6" (closeModalCategoria)="handleClose6($event)"></app-modal-categoria>
+        <app-footer></app-footer>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+Backend-NodeJs/src/.env
+Backend-NodeJs/node_modules/
+Backend-NodeJs/src/api/uploads
+
+
+Frontend-Angular/appsdc/node_modules
+Frontend-Angular/appsdc/.sass-cache
+Frontend-Angular/appsdc/connect.lock
+Frontend-Angular/appsdc/coverage
+Frontend-Angular/appsdc/libpeerconnection.log

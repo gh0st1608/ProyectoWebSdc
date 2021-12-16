@@ -1,0 +1,949 @@
+<div class="mn" [(ngModel)]="listaCategorias" [(ngModel)]="listaDisplayCategorias" >
+    <div class="row"  [ngStyle]="{'display': listaDisplayCategorias[0]}">
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[0].Nombre}}</h2> 
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[0].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product"  [(ngModel)]="arrayArroces" [(ngModel)]="listaDisplayArroces">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayArroces[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayArroces[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayArroces[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4>{{arrayArroces[0].Nombre}}</h4>
+                                    <p class="price">{{arrayArroces[0].Precio}}</p>
+                                    <p>{{arrayArroces[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayArroces[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayArroces[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayArroces[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4>{{arrayArroces[1].Nombre}}</h4>
+                                    <p class="price">{{arrayArroces[1].Precio}}</p>
+                                    <p>{{arrayArroces[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayArroces[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayArroces[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayArroces[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4>{{arrayArroces[2].Nombre}}</h4>
+                                    <p class="price">${{arrayArroces[2].Precio}}</p>
+                                    <p>{{arrayArroces[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayArroces[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayArroces[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayArroces[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4>{{arrayArroces[3].Nombre}}</h4>
+                                    <p class="price">{{arrayArroces[3].Precio}}</p>
+                                    <p>{{arrayArroces[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayArroces[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayArroces[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayArroces[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4>{{arrayArroces[4].Nombre}}</h4>
+                                    <p class="price">{{arrayArroces[4].Precio}}</p>
+                                    <p>{{arrayArroces[4].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[1]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[1].Nombre}}</h2>  
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[1].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product" [(ngModel)]="arrayCarnes" [(ngModel)]="listaDisplayCarnes">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCarnes[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCarnes[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCarnes[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCarnes[0].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCarnes[0].Precio}}</p>
+                                    <p>{{arrayCarnes[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCarnes[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCarnes[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCarnes[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCarnes[1].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCarnes[1].Precio}}</p>
+                                    <p>{{arrayCarnes[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCarnes[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCarnes[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCarnes[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCarnes[2].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCarnes[2].Precio}}</p>
+                                    <p>{{arrayCarnes[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCarnes[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCarnes[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCarnes[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCarnes[3].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCarnes[3].Precio}}</p>
+                                    <p>${{arrayCarnes[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCarnes[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCarnes[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCarnes[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCarnes[4].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCarnes[4].Precio}}</p>
+                                    <p>{{arrayCarnes[4].Precio}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[2]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[2].Nombre}}</h2>  
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[2].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product" [(ngModel)]="arrayCausas" [(ngModel)]="listaDisplayCausas">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCausas[0]}" >
+                            <div class="thumbnail">
+                                <a href="{{arrayCausas[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCausas[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCausas[0].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCausas[0].Precio}}</p>
+                                    <p>{{arrayCausas[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCausas[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCausas[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCausas[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCausas[1].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCausas[1].Precio}}</p>
+                                    <p>{{arrayCausas[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCausas[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCausas[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCausas[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCausas[2].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCausas[2].Precio}}</p>
+                                    <p>{{arrayCausas[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCausas[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCausas[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCausas[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCausas[3].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCausas[3].Precio}}</p>
+                                    <p>{{arrayCausas[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCausas[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCausas[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCausas[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCausas[4].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCausas[4].Precio}}</p>
+                                    <p>{{arrayCausas[4].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[3]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[3].Nombre}}</h2>  
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[3].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product"  [(ngModel)]="arrayCeviches" [(ngModel)]="listaDisplayCeviches">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCeviches[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCeviches[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCeviches[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCeviches[0].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCeviches[0].Precio}}</p>
+                                    <p>{{arrayCeviches[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCeviches[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCeviches[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCeviches[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCeviches[1].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCeviches[1].Precio}}</p>
+                                    <p>{{arrayCeviches[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCeviches[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCeviches[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCeviches[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCeviches[2].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCeviches[2].Precio}}</p>
+                                    <p>{{arrayCeviches[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCeviches[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCeviches[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCeviches[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCeviches[3].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCeviches[3].Precio}}</p>
+                                    <p>{{arrayCeviches[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayCeviches[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayCeviches[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayCeviches[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayCeviches[4].Nombre}}</a></h4>
+                                    <p class="price">${{arrayCeviches[4].Precio}}</p>
+                                    <p>{{arrayCeviches[4].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[4]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[4].Nombre}}</h2>  
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[4].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product"  [(ngModel)]="arrayChicharrones" [(ngModel)]="listaDisplayChicharrones">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayChicharrones[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayChicharrones[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayChicharrones[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayChicharrones[0].Nombre}}</a></h4>
+                                    <p class="price">{{arrayChicharrones[0].Precio}}</p>
+                                    <p>{{arrayChicharrones[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12"  [ngStyle]="{'display': listaDisplayChicharrones[1]}" >
+                            <div class="thumbnail">
+                                <a href="{{arrayChicharrones[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayChicharrones[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html"></a>{{arrayChicharrones[1].Nombre}}</h4>
+                                    <p class="price">{{arrayChicharrones[1].Precio}}</p>
+                                    <p>{{arrayChicharrones[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayChicharrones[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayChicharrones[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayChicharrones[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayChicharrones[2].Nombre}}</a></h4>
+                                    <p class="price">{{arrayChicharrones[2].Precio}}</p>
+                                    <p>{{arrayChicharrones[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayChicharrones[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayChicharrones[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayChicharrones[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayChicharrones[3].Nombre}}</a></h4>
+                                    <p class="price">{{arrayChicharrones[3].Precio}}</p>
+                                    <p>{{arrayChicharrones[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayChicharrones[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayChicharrones[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayChicharrones[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayChicharrones[4].Nombre}}</a></h4>
+                                    <p class="price">{{arrayChicharrones[4].Precio}}</p>
+                                    <p>{{arrayChicharrones[4].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[5]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[5].Nombre}}</h2>
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[5].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product" [(ngModel)]="arrayEspeciales" [(ngModel)]="listaDisplayEspeciales">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayEspeciales[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayEspeciales[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayEspeciales[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayEspeciales[0].Nombre}}</a></h4>
+                                    <p class="price">${{arrayEspeciales[0].Precio}}</p>
+                                    <p>{{arrayEspeciales[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayEspeciales[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayEspeciales[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayEspeciales[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayEspeciales[1].Nombre}}</a></h4>
+                                    <p class="price">${{arrayEspeciales[1].Precio}}</p>
+                                    <p>{{arrayEspeciales[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayEspeciales[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayEspeciales[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayEspeciales[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayEspeciales[2].Nombre}}</a></h4>
+                                    <p class="price">${{arrayEspeciales[2].Precio}}</p>
+                                    <p>{{arrayEspeciales[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayEspeciales[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayEspeciales[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayEspeciales[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayEspeciales[3].Nombre}}</a></h4>
+                                    <p class="price">${{arrayEspeciales[3].Precio}}</p>
+                                    <p>{{arrayEspeciales[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayEspeciales[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayEspeciales[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayEspeciales[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayEspeciales[4].Nombre}}</a></h4>
+                                    <p class="price">${{arrayEspeciales[4].Precio}}</p>
+                                    <p>{{arrayEspeciales[4].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[6]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[6].Nombre}}</h2>  
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[6].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product" [(ngModel)]="arrayJugosos" [(ngModel)]="listaDisplayJugosos">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayJugosos[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayJugosos[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayJugosos[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayJugosos[0].Nombre}}</a></h4>
+                                    <p class="price">${{arrayJugosos[0].Precio}}</p>
+                                    <p>{{arrayJugosos[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayJugosos[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayJugosos[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayJugosos[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayJugosos[1].Nombre}}</a></h4>
+                                    <p class="price">${{arrayJugosos[1].Precio}}</p>
+                                    <p>{{arrayJugosos[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayJugosos[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayJugosos[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayJugosos[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayJugosos[2].Nombre}}</a></h4>
+                                    <p class="price">{{arrayJugosos[2].Precio}}</p>
+                                    <p>{{arrayJugosos[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayJugosos[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayJugosos[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayJugosos[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayJugosos[3].Nombre}}</a></h4>
+                                    <p class="price">${{arrayJugosos[3].Precio}}</p>
+                                    <p>{{arrayJugosos[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayJugosos[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayJugosos[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayJugosos[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayJugosos[4].Nombre}}</a></h4>
+                                    <p class="price">${{arrayJugosos[4].Precio}}</p>
+                                    <p>{{arrayJugosos[4].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[7]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[7].Nombre}}</h2>  
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[7].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product" [(ngModel)]="arrayLicores" [(ngModel)]="listaDisplayLicores">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayLicores[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayLicores[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayLicores[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayLicores[0].Nombre}}</a></h4>
+                                    <p class="price">${{arrayLicores[0].Precio}}</p>
+                                    <p>{{arrayLicores[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayLicores[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayLicores[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayLicores[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayLicores[1].Nombre}}</a></h4>
+                                    <p class="price">${{arrayLicores[1].Precio}}</p>
+                                    <p>{{arrayLicores[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayLicores[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayLicores[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayLicores[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayLicores[2].Nombre}}</a></h4>
+                                    <p class="price">${{arrayLicores[2].Precio}}</p>
+                                    <p>{{arrayLicores[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayLicores[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayLicores[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayLicores[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayLicores[3].Nombre}}</a></h4>
+                                    <p class="price">${{arrayLicores[3].Precio}}</p>
+                                    <p>{{arrayLicores[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayLicores[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayLicores[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayLicores[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayLicores[4].Nombre}}</a></h4>
+                                    <p class="price">${{arrayLicores[4].Precio}}</p>
+                                    <p>{{arrayLicores[4].Descripcion}}/p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[8]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[8].Nombre}}</h2>  
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[8].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product" [(ngModel)]="arrayPastas" [(ngModel)]="listaDisplayPastas">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPastas[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPastas[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPastas[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPastas[0].Nombre}}</a></h4>
+                                    <p class="price">${{arrayPastas[0].Precio}}</p>
+                                    <p>{{arrayPastas[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPastas[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPastas[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPastas[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPastas[1].Nombre}}</a></h4>
+                                    <p class="price">${{arrayPastas[1].Precio}}</p>
+                                    <p>{{arrayPastas[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPastas[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPastas[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPastas[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPastas[2].Nombre}}</a></h4>
+                                    <p class="price">${{arrayPastas[2].Precio}}</p>
+                                    <p>{{arrayPastas[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPastas[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPastas[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPastas[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPastas[3].Nombre}}</a></h4>
+                                    <p class="price">${{arrayPastas[3].Precio}}</p>
+                                    <p>{{arrayLicores[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPastas[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPastas[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPastas[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPastas[4].Nombre}}</a></h4>
+                                    <p class="price">${{arrayPastas[4].Nombre}}</p>
+                                    <p>{{arrayPastas[4].Nombre}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[9]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[9].Nombre}}</h2>  
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[9].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product" [(ngModel)]="arrayPostres" [(ngModel)]="listaDisplayPostres">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPostres[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPostres[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPostres[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPostres[0].Nombre}}</a></h4>
+                                    <p class="price">{{arrayPostres[0].Precio}}</p>
+                                    <p>{{arrayPostres[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPostres[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPostres[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPostres[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPostres[1].Nombre}}</a></h4>
+                                    <p class="price">${{arrayPostres[1].Precio}}</p>
+                                    <p>{{arrayPostres[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPostres[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPostres[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPostres[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPostres[2].Nombre}}</a></h4>
+                                    <p class="price">${{arrayPostres[2].Precio}}</p>
+                                    <p>{{arrayPostres[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPostres[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPostres[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPostres[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPostres[3].Nombre}}</a></h4>
+                                    <p class="price">{{arrayPostres[3].Precio}}</p>
+                                    <p>{{arrayPostres[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayPostres[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayPostres[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayPostres[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayPostres[4].Nombre}}</a></h4>
+                                    <p class="price">{{arrayPostres[4].Precio}}</p>
+                                    <p>{{arrayPostres[4].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div class="row" [ngStyle]="{'display': listaDisplayCategorias[10]}" >
+        <div class="col-sm-4 col-md-3">
+            <div class="heading-group mn-group-title color-w">
+                <h2>{{listaCategorias[10].Nombre}}</h2>  
+                <div class="star-group star-small">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o star-1x"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>{{listaCategorias[10].Descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 bg-white">
+            <div class="product" [(ngModel)]="arrayTiraditos" [(ngModel)]="listaDisplayTiraditos">
+                <div  class="row">
+                    <div class="owl" data-items="3" data-itemsDesktop="3" data-itemsDesktopSmall="2" data-itemsTablet="2" data-itemsMobile="1">
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayTiraditos[0]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayTiraditos[0].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayTiraditos[0].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayTiraditos[0].Nombre}}</a></h4>
+                                    <p class="price">${{arrayTiraditos[0].Precio}}</p>
+                                    <p>{{arrayTiraditos[0].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayTiraditos[1]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayTiraditos[1].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayTiraditos[1].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayTiraditos[1].Nombre}}</a></h4>
+                                    <p class="price">${{arrayTiraditos[1].Precio}}</p>
+                                    <p>{{arrayTiraditos[1].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayTiraditos[2]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayTiraditos[2].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayTiraditos[2].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayTiraditos[2].Nombre}}</a></h4>
+                                    <p class="price">${{arrayTiraditos[2].Precio}}</p>
+                                    <p>{{arrayTiraditos[2].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayTiraditos[3]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayTiraditos[3].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayTiraditos[3].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayTiraditos[3].Nombre}}</a></h4>
+                                    <p class="price">${{arrayTiraditos[3].Precio}}</p>
+                                    <p>{{arrayTiraditos[3].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" [ngStyle]="{'display': listaDisplayTiraditos[4]}">
+                            <div class="thumbnail">
+                                <a href="{{arrayTiraditos[4].Ruta}}" class="hover-img image-zoom">
+                                    <img src="{{arrayTiraditos[4].Ruta}}" class="img-responsive" alt="image">
+                                    <div class="hover-caption color-w"><i class="fa fa-search-plus"></i></div>
+                                </a>
+                                <div class="caption">
+                                    <h4><a href="fdetail.html">{{arrayTiraditos[4].Nombre}}</a></h4>
+                                    <p class="price">${{arrayTiraditos[4].Precio}}</p>
+                                    <p>{{arrayTiraditos[4].Descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>-->     
+</div>

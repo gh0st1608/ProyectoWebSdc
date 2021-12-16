@@ -1,0 +1,12 @@
+.btn-2{
+	color:#fff;
+	background:#da451b;
+	text-transform:uppercase;
+	padding:6px 25px 6px 25px;
+	border: radius 2px;
+	border:none;
+}
+.btn-2:hover,.btn-2:active,.btn-2:focus{
+	background:#333;
+	color:#fff;
+}

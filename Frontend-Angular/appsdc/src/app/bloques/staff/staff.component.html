@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col-md-6">
+        <!-- about-->
+        <div class="about">
+            <div class="title">Nuestro<h3>Restaurant</h3></div>	
+            <p>Sabore de Casma restaurant está decorado con muy buen gusto y con un patio interior muy agradable y acogedor. Nuestro servicio es atento, personalizado, eficaz y acertado en las recomendaciones. Con platos de fondos maravillosos. De calidad, diferente, preparada y presentada con esmero.</p>
+            <br/><img src="assets/images/banner/banner2_web.jpg" alt="image"><br/>
+            <p>Es un ambiente de paz y tranquilidad que se respira que combinado con la comida y la bebida, hacen de Sabores de Casma uno de los favoritos de nuestros clientes que buscan un placer para los cinco sentidos. Manteles de tela, buena carta de vinos, excelente relación calidad precio, un gran servicio que nuestro público se merece.</p>
+        </div>
+        <!-- /about-->
+    </div>
+    <div class="col-md-6">
+        <!--team-->
+        <div class="team"  [(ngModel)]="listaEmpleados" [(ngModel)]="listaDisplayEmpleados" >
+            <div class="row"> 
+                <div [ngStyle] = "{'display': listaDisplayEmpleados[0]}">
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail" >
+                        <figure class="hover-img" >
+                            <img src="{{listaEmpleados[0].Ruta}}" alt="image">
+                        </figure>
+                        <div class="caption">
+                            <h4>{{listaEmpleados[0].Nombre}} {{listaEmpleados[0].ApellidoPaterno}} <span>/{{listaEmpleados[0].Cargo}}</span></h4>
+                            <p>{{listaEmpleados[0].Descripcion}}</p>
+                            <ul class="list-inline social-default">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-youtube-play"></a></li>
+                            </ul>
+                        </div>
+                    </div>	
+                </div>
+                </div>
+                <div [ngStyle] = "{'display': listaDisplayEmpleados[1]}">
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail" >
+                        <figure class="hover-img" >
+                            <img src="{{listaEmpleados[1].Ruta}}" alt="image">
+                        </figure>
+                        <div class="caption">
+                            <h4>{{listaEmpleados[1].Nombre}} {{listaEmpleados[1].ApellidoPaterno}} <span>/{{listaEmpleados[1].Cargo}}</span></h4>
+                            <p>{{listaEmpleados[1].Descripcion}}</p>
+                            <ul class="list-inline social-default">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-youtube-play"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div [ngStyle] = "{'display': listaDisplayEmpleados[2]}">
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        <figure class="hover-img">
+                            <img src="{{listaEmpleados[2].Ruta}}" alt="image">
+                        </figure>
+                        <div class="caption">
+                            <h4>{{listaEmpleados[2].Nombre}} {{listaEmpleados[2].ApellidoPaterno}} <span>/{{listaEmpleados[2].Cargo}}</span></h4>
+                            <p>{{listaEmpleados[2].Descripcion}}</p>
+                            <ul class="list-inline social-default">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-youtube-play"></a></li>
+                            </ul>
+                        </div>
+                    </div>	
+                </div>
+                </div>
+                <div [ngStyle] = "{'display': listaDisplayEmpleados[3]}">
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        <figure class="hover-img">
+                            <img src="{{listaEmpleados[3].Ruta}}" alt="image">
+                        </figure>
+                        <div class="caption">
+                            <h4>{{listaEmpleados[3].Nombre}} {{listaEmpleados[3].ApellidoPaterno}} <span>/{{listaEmpleados[3].Cargo}}</span></h4>
+                            <p>{{listaEmpleados[3].Descripcion}}</p>
+                            <ul class="list-inline social-default">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-youtube-play"></a></li>
+                            </ul>
+                        </div>
+                    </div>	
+                </div>
+                </div>
+            </div>
+        </div>
+        <!--/team-->
+    </div>
+</div>
