@@ -10,7 +10,7 @@ import { User } from "../models/user";
 export class UsersService {
   constructor(private http: HttpClient, private cookies: CookieService) {}
 
-  urlProd = 'http://52.204.176.6:3000'
+  urlProd = 'http://54.224.80.70:3000'
   urlDesa = 'http://localhost:3000'
 
   login(user: User){

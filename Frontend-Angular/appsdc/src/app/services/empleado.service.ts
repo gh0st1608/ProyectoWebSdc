@@ -10,7 +10,7 @@ import { HttpClient} from '@angular/common/http';
 export class EmpleadoService {
 
   constructor(private http:HttpClient){}
-  urlProd = 'http://52.204.176.6:3000'
+  urlProd = 'http://54.224.80.70:3000'
   urlDesa = 'http://localhost:3000'
 
   actualizarEmpleado(formData:FormData){
