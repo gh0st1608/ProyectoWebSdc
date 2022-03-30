@@ -15,14 +15,14 @@ export class ProductoService {
 
   actualizarProducto(formData:FormData){
     //console.log(producto)
-    const path = this.urlProd + '/producto/actualizar';
+    const path = this.urlDesa + '/producto/actualizar';
     return this.http.post(path,formData)
   }
 
 
   listarProductos(formData: FormData){
     //console.log(producto)
-    const path = this.urlProd + '/producto/listar';
+    const path = this.urlDesa + '/producto/listar';
     return this.http.post(path,formData)
   }
 

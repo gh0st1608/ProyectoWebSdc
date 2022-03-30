@@ -15,13 +15,13 @@ export class EventoService {
 
   actualizarEvento(formData:FormData){
     //console.log(producto)
-    const path = this.urlProd + '/evento/actualizar';
+    const path = this.urlDesa + '/evento/actualizar';
     return this.http.post(path,formData)
   }
 
   listarEventos(){
     //console.log(producto)
-    const path = this.urlProd + '/evento/listar';
+    const path = this.urlDesa + '/evento/listar';
     return this.http.post(path,{})
   }
 
