@@ -14,14 +14,14 @@ export class CategoriaService {
 
   actualizarCategoria(formData:FormData){
     //console.log(producto)
-    const path = this.urlProd + '/categoria/actualizar';
+    const path = this.urlDesa + '/categoria/actualizar';
     return this.http.post(path,formData)
   }
 
 
   listarCategorias(){
     //console.log(producto)
-    const path = this.urlProd + '/categoria/listar';
+    const path = this.urlDesa + '/categoria/listar';
     return this.http.post(path,{}) //retorna un observable
   }
 }

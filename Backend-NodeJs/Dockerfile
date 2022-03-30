@@ -1,23 +1,23 @@
-# Create image based on the official Node 6 image from the dockerhub
-FROM node:6
+# Crear una imagen basada en Node 16 
+FROM node:16
 
-# Create a directory where our app will be placed
+# Crear un directorio donde se ubicara la aplicación
 RUN mkdir -p /usr/src/app
 
-# Change directory so that our commands run inside this new directory
+# Cambiar directorio que en consecuencia ejecutara nuestros comandos en el nuevo directorio
 WORKDIR /usr/src/app
 
-# Copy dependency definitions
+# Copiar el package json donde se definen las dependencias
 COPY package.json /usr/src/app
 
-# Install dependecies
+# Instalar dependencias
 RUN npm install
 
-# Get all the code needed to run the app
+# Copiar todo el codigo que se necesita para poder ejecutar la aplicación
 COPY . /usr/src/app
 
-# Expose the port the app runs in
+# Exponer el puerto 3000
 EXPOSE 3000
 
-# Serve the app
+# Servir la aplicación
 CMD ["npm", "start"]

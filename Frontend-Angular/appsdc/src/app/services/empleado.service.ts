@@ -15,13 +15,13 @@ export class EmpleadoService {
 
   actualizarEmpleado(formData:FormData){
     //console.log(producto)
-    const path = this.urlProd + '/empleado/actualizar';
+    const path = this.urlDesa + '/empleado/actualizar';
     return this.http.post(path,formData)
   }
 
   listarEmpleados(){
     //console.log(producto)
-    const path = this.urlProd + '/empleado/listar';
+    const path = this.urlDesa + '/empleado/listar';
     return this.http.post(path,{}) //retorna un observable
   }
 

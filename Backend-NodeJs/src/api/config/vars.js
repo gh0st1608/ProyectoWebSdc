@@ -15,10 +15,11 @@ dotenv.config({
 
 const vars = {
     ENV: process.env.NODE_ENV,
+    HOSTNAME: process.env.HOSTNAME,
     PORT: process.env.PORT,
     TOKEN_JWT: process.env.TOKEN_ADMIN,
     MONGO_ENV: {
-      MONGO_URI: process.env.DB_MONGO_URI_2,
+      MONGO_URI: process.env.DB_MONGO_URI,
     },
     AWS_ENV: {
       KEY_ID: process.env.AWS_KEY_ID,

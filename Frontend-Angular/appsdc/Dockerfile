@@ -4,7 +4,7 @@ COPY ./ /app/
 RUN npm install
 RUN npm run build --prod
 
-# Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
 FROM nginx:alpine
-COPY --from=node ./dist/appsdc /usr/share/nginx/html
-COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
+COPY --from=node /app/dist/appsdc /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
