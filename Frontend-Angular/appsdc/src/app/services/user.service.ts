@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { CookieService } from "ngx-cookie-service";
 import { User } from "../models/user";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: "root"
@@ -10,11 +11,10 @@ import { User } from "../models/user";
 export class UsersService {
   constructor(private http: HttpClient, private cookies: CookieService) {}
 
-  urlProd = 'http://54.224.80.70:3000'
-  urlDesa = 'http://localhost:3000'
+  Hostname = environment.HostBackend + ':' + environment.PortBackend;
 
   login(user: User){
-    const path = this.urlDesa + '/login';
+    const path = this.Hostname + '/login';
     return this.http.post(path,user)
   }
 

@@ -1,6 +1,8 @@
 ﻿import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Producto } from '../models/producto';
+import { environment } from 'src/environments/environment';
+
 
 
 @Injectable({
@@ -10,19 +12,19 @@ import { Producto } from '../models/producto';
 export class ProductoService {
 
   constructor(private http:HttpClient){}
-  urlProd = 'http://54.224.80.70:3000'
-  urlDesa = 'http://localhost:3000'
+
+  Hostname = environment.HostBackend + ':' + environment.PortBackend;
 
   actualizarProducto(formData:FormData){
     //console.log(producto)
-    const path = this.urlDesa + '/producto/actualizar';
+    const path = this.Hostname + '/producto/actualizar';
     return this.http.post(path,formData)
   }
 
 
   listarProductos(formData: FormData){
     //console.log(producto)
-    const path = this.urlDesa + '/producto/listar';
+    const path = this.Hostname + '/producto/listar';
     return this.http.post(path,formData)
   }
 
