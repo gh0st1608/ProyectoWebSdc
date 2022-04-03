@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 //import { Empleado } from '../models/empleado';
 
 
@@ -9,19 +10,18 @@ import { HttpClient} from '@angular/common/http';
 
 export class CategoriaService {
   constructor(private http:HttpClient){}
-  urlProd = 'http://54.224.80.70:3000'
-  urlDesa = 'http://localhost:3000'
+  Hostname = environment.HostBackend + ':' + environment.PortBackend;
 
   actualizarCategoria(formData:FormData){
     //console.log(producto)
-    const path = this.urlDesa + '/categoria/actualizar';
+    const path = this.Hostname + '/categoria/actualizar';
     return this.http.post(path,formData)
   }
 
 
   listarCategorias(){
     //console.log(producto)
-    const path = this.urlDesa + '/categoria/listar';
+    const path = this.Hostname + '/categoria/listar';
     return this.http.post(path,{}) //retorna un observable
   }
 }
