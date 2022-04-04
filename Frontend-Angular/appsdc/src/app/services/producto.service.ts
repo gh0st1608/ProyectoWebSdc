@@ -13,18 +13,18 @@ export class ProductoService {
 
   constructor(private http:HttpClient){}
 
-  Hostname = environment.HostBackend + ':' + environment.PortBackend;
+  Host = 'http://' + environment.HostBackend + ':3000';
 
   actualizarProducto(formData:FormData){
     //console.log(producto)
-    const path = this.Hostname + '/producto/actualizar';
+    const path = this.Host + '/producto/actualizar';
     return this.http.post(path,formData)
   }
 
 
   listarProductos(formData: FormData){
     //console.log(producto)
-    const path = this.Hostname + '/producto/listar';
+    const path = this.Host + '/producto/listar';
     return this.http.post(path,formData)
   }
 

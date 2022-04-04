@@ -10,18 +10,18 @@ import { environment } from 'src/environments/environment';
 
 export class CategoriaService {
   constructor(private http:HttpClient){}
-  Hostname = environment.HostBackend + ':' + environment.PortBackend;
+  Host = 'http://' + environment.HostBackend + ':3000';
 
   actualizarCategoria(formData:FormData){
     //console.log(producto)
-    const path = this.Hostname + '/categoria/actualizar';
+    const path = this.Host + '/categoria/actualizar';
     return this.http.post(path,formData)
   }
 
 
   listarCategorias(){
     //console.log(producto)
-    const path = this.Hostname + '/categoria/listar';
+    const path = this.Host + '/categoria/listar';
     return this.http.post(path,{}) //retorna un observable
   }
 }

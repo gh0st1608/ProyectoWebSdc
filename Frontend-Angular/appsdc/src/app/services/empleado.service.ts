@@ -11,17 +11,17 @@ import { environment } from 'src/environments/environment';
 export class EmpleadoService {
 
   constructor(private http:HttpClient){}
-  Hostname = environment.HostBackend + ':' + environment.PortBackend;
+  Host = 'http://' + environment.HostBackend + ':3000';
 
   actualizarEmpleado(formData:FormData){
     //console.log(producto)
-    const path = this.Hostname + '/empleado/actualizar';
+    const path = this.Host + '/empleado/actualizar';
     return this.http.post(path,formData)
   }
 
   listarEmpleados(){
     //console.log(producto)
-    const path = this.Hostname + '/empleado/listar';
+    const path = this.Host + '/empleado/listar';
     return this.http.post(path,{}) //retorna un observable
   }
 
