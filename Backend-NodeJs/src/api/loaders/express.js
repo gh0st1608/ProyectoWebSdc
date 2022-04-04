@@ -38,7 +38,7 @@ app.use(routes);
 
 app.initServer = () => {
     const server = app.listen(3000, function () {
-        const host = server.address().address;
+        const host = server.address().address ? '127.0.0.1' : 'localhost';
         const port = server.address().port;
         console.log('AWS SES example app listening at http://%s:%s', host, port);
     });

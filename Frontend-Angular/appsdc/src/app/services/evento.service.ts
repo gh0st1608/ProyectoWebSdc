@@ -11,17 +11,17 @@ import { environment } from 'src/environments/environment';
 export class EventoService {
 
   constructor(private http:HttpClient){}
-  Hostname = environment.HostBackend + ':' + environment.PortBackend;
+  Host = 'http://' + environment.HostBackend + ':3000';
 
   actualizarEvento(formData:FormData){
     //console.log(producto)
-    const path = this.Hostname + '/evento/actualizar';
+    const path = this.Host + '/evento/actualizar';
     return this.http.post(path,formData)
   }
 
   listarEventos(){
     //console.log(producto)
-    const path = this.Hostname + '/evento/listar';
+    const path = this.Host + '/evento/listar';
     return this.http.post(path,{})
   }
 

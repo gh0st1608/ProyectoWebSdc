@@ -11,10 +11,10 @@ import { environment } from 'src/environments/environment';
 export class UsersService {
   constructor(private http: HttpClient, private cookies: CookieService) {}
 
-  Hostname = environment.HostBackend + ':' + environment.PortBackend;
+  Host = 'http://' + environment.HostBackend + ':3000';
 
   login(user: User){
-    const path = this.Hostname + '/login';
+    const path = this.Host + '/login';
     return this.http.post(path,user)
   }
 
