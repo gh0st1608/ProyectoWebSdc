@@ -16,11 +16,11 @@ RUN npm install
 # Copiar todo el codigo que se necesita para poder ejecutar la aplicación
 COPY . /usr/src/app
 
-ARG node_env=development
+ARG node_env=production
 ENV NODE_ENV ${node_env}
 
 # Exponer el puerto 3000
 EXPOSE 3000
 
-# Servir la aplicación --prod CMD ["npm", "start"]
+# Servir la aplicación --prod CMD ["npm","run","start"]
 CMD ["npm","run","start"]

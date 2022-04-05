@@ -11,4 +11,4 @@ array = (${string//,/})
 
 for i in "${!array[@]}"; do
     echo "Desplegar proyecto en servidor ${array[i]}"
-    ssh ec2-user@${array[i]} "pm2 stop index.js && cd proyecto_sdc && git pull origin master && pm2 start index.js"
+    ssh ec2-user} "pm2 stop index.js && cd proyecto_sdc && git pull origin master && pm2 start index.js"@${array[i]
