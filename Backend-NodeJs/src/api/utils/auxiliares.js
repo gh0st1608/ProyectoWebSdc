@@ -1,12 +1,12 @@
 const path = require('path');
-const { HOSTNAME } = require('../config/vars')
+const { HOST } = require('../config/vars')
 
 
 const guardarImagen = async ({nombre,imagenType,mv})=>{
     try{
     const tipo = imagenType.slice(imagenType.indexOf("/",0)+1);
     const uploadPath =  path.join(__dirname,'/../uploads/',nombre + '.' + tipo);
-    const serverPath = 'http://' + HOSTNAME +':3000/' + nombre + '.' + tipo;
+    const serverPath = 'http://' + HOST +':3000/' + nombre + '.' + tipo;
     console.log(tipo)
     console.log(serverPath)
     mv(uploadPath)
