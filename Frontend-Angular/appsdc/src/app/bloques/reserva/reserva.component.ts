@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { ReservaService } from './reserva.service'
+import { ReservaService } from '../../services/reserva.service'
 
 @Component({
   selector: 'app-reserva',
