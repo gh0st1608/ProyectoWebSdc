@@ -1,6 +1,5 @@
 const express = require('express');
 const db = require('../loaders/mongoose');
-//const body = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 const fileUpload = require('express-fileupload');
@@ -38,7 +37,7 @@ app.use(routes);
 
 app.initServer = () => {
     const server = app.listen(3000, function () {
-        const host = server.address().address ? '127.0.0.1' : 'localhost';
+        const host = server.address().address;
         const port = server.address().port;
         console.log('AWS SES example app listening at http://%s:%s', host, port);
     });

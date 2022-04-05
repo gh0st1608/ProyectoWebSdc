@@ -16,20 +16,21 @@ if(process.env.NODE_ENV.trim() == 'production'){
     path: path.resolve(__dirname, '../../.env') ///${process.env.NODE_ENV}   Users/ismael/Documents/proyectos/NodeJS/Diplomado-Backend-4/clase6/src/shared/config
   });
 
-  console.log(process.env.HOSTNAME);
-
+  console.log(process.env.HOST);
+  console.log(process.env.AWS_KEY_ID);
   }else{
     dotenv.config({
       path: path.resolve(__dirname, `../../development.env`) 
     });
     console.log(path.resolve(__dirname, '../../development.env'))
-
+    console.log(process.env.HOST);
+    console.log(process.env.AWS_KEY_ID);
 
 }
 
 const vars = {
   ENV: process.env.NODE_ENV,
-  HOSTNAME: process.env.HOSTNAME,
+  HOST: process.env.HOST,
   PORT: process.env.PORT,
   TOKEN_JWT: process.env.TOKEN_ADMIN,
   MONGO_ENV: {
