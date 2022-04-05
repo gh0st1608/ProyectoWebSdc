@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { Reserva } from './reserva';
+import { Reserva } from '../models/reserva';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable()
 export class ReservaService {
 
   constructor(private http:HttpClient){}
+  Host = 'http://' + environment.HostBackend + ':3000';
+
   crearReserva(reserva:Reserva){
-    const path = 'http://localhost:3000/email/reservar';
+    
+    const path = this.Host + '/email/reservar';
+    console.log(path)
     return this.http.post(path,reserva)
   }
 

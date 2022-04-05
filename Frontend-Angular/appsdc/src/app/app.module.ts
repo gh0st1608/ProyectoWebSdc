@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { ReservaService} from './bloques/reserva/reserva.service';
+import { ReservaService} from './services/reserva.service';
 import { UsersService } from './services/user.service';
 import { ProductoService } from './services/producto.service';
 import { EmpleadoService } from './services/empleado.service';
