@@ -7,13 +7,16 @@ services:
     restart: always
     ports:
       - "80:80"
-      - "443:443"
     container_name: angular
-    volumes:
-      - ./Frontend-Angular/nginx:/etc/nginx/conf.d
 
-
-
-
-
+  nginx:
+    build: 
+      context: .
+      dockerfile: ./LoadBalancer/Dockerfile
+    ports:
+      - "80:80"
+    restart: always
+    container_name: mean
+    links:
+      - angular
 

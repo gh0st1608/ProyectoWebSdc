@@ -1,0 +1,26 @@
+version: "3.6"
+services:
+  backend:
+    build: ./Backend-NodeJs
+    ports:
+      - "3000:3000"
+
+  nginx:
+    build: 
+      context: .
+      dockerfile: ./Webserver/Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+    volumes:
+      - ./Webserver/nginx/conf/:/etc/nginx/conf.d:ro
+      - ./Webserver/certbot/www/:/var/www/certbot/:ro
+      - ./Webserver/certbot/conf/:/etc/nginx/ssl/:ro
+      - ./Webserver/log/letsencrypt:/var/log/letsencrypt
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./Webserver/certbot/www/:/var/www/certbot/:rw
+      - ./Webserver/certbot/conf/:/etc/letsencrypt/:rw
